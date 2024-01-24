@@ -54,10 +54,9 @@ public class OauthController {
         return RoleCodeEnum.ADMIN.getDefaultUserId().equals(user.getId()) && RoleCodeEnum.ADMIN.getPassword().equals(
                 user.getPassword());
     }
-
     private void validateUser(final User user) {
         if (Objects.isNull(user)) {
-            throw new BusinessException("oauth.userNameNotExits");
+            throw new BusinessException("oatestestuth.userNameNotExits");
         }
         if (!ValidStatusEnum.VALID.getCode().equals(user.getStatus())) {
             throw new BusinessException("oauth.invalidUserName");
